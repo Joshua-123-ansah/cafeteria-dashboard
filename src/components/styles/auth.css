@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+body{
+    font-family: Karla, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
+    background-color: #fafafa;
+}
+h2{
+    text-align: center;
+    color: #641A11;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing:1px;
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.container {
+    width: 464px;
+    height: 455px;
+    background-color: white;
+    margin: 3px auto;
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.2);
+
+  }
+  .wrapper {
+    padding: 10px 30px;
+
+  }
+  /* title-start */
+  .wrapper .title h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+  /* title-end */
+  /* p-one-start */
+  .wrapper .p-one p {
+    color: #95959d;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+  /* p-one-end */
+  /* inp-email-start */
+  .wrapper .inp {
+    position: relative;
+  }
+  .wrapper .inp {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper .inp input[type="email"], input[type="password"],input[type="text"] {
+    border: 0;
+    border: 1px solid #91463c;
+    width: 370px;
+    outline: none;
+    height: 51px;
+    padding: 0 20px;
+    border-radius: 4px;
+  }
+  .wrapper .inp input[type="text"]:focus {
+    border: 1px solid #611b11;
+  }
+
+  .wrapper .inp input::placeholder {
+    color: #a5a4ac;
+    font-size: 12px;
+  }
+  .wrapper .inp label.email {
+    position: absolute;
+    left: 20px;
+    top: -10px;
+    color: #95959d;
+  }
+
+  .wrapper .inp::before {
+    position: absolute;
+    content: "";
+    background-color: rgb(255, 255, 255);
+    left: 10px;
+    width: 60px;
+    height: 21px;
+    top: -10px;
+  }
+
+  .wrapper .inp .email-margin {
+    margin-bottom: 40px;
+  }
+
+  .wrapper .inp .username-margin {
+    margin-bottom: 40px;
+  }
+
+  /* inp-email-end */
+  /* inp-pass-start */
+  .wrapper .inp label.pass {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    z-index: 2;
+    color: #95959d;
+  }
+
+  .wrapper .inp label.username {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    z-index: 2;
+    color: #95959d;
+  }
+
+  .wrapper .inp::after {
+    position: absolute;
+    content: "";
+    background-color: rgb(255, 255, 255);
+    left: 12px;
+    width: 87px;
+    height: 21px;
+    top: 79px;
+  }
+
+  button{
+    width:350px;
+  }
+
+  .wrapper .button {
+    display: flex;
+    justify-content: center;
+    width:100%;
+  }
+  
+  .btn {
+    margin-top: 30px;
+    border: 0;
+    width: 415px;
+    height: 60px;
+    background-color: #641A11;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 26px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    box-shadow: 1px 1px 20px rgba(111, 114, 218, 0.2);
+    background-color: #7c342a;;
+  }
+
+  /* btn-end */
+  /* line-start */
+  .wrapper .line {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #f0f1ff;
+    line-height: 0.1em;
+    margin: 30px;
+    margin-bottom: 40px;
+    margin-left: 0%;
+  }
+
+  .wrapper .line span {
+    background: #fff;
+    padding: 0 10px;
+    color: #afafb5;
+    font-size: 14px;
+  }
+
+
+  /* icon-wrapper-end */
+  /* down-start */
+  .wrapper .down {
+    text-align: center;
+    font-size: 14px;
+  }
+  .wrapper .down span {
+    color: #b8b7be;
+  }
+  /* down-end */
