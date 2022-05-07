@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {addFood} from "../firebase"
+import { addFood } from "../firebase";
 import { useNavigate } from "react-router-dom";
 
 const Form = () => {
@@ -7,52 +7,83 @@ const Form = () => {
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
   const [extras, setExtras] = useState("");
-  const [error,setError] = useState("");
-  const [cafeteriaName,setCaficianName] = useState("");
-  const [confirm,setConfirm] = useState("");
+  const [error, setError] = useState("");
+  const [cafeteriaName, setCaficianName] = useState("");
+  const [confirm, setConfirm] = useState("");
 
   const navigate = useNavigate();
 
-  const handleSubmit =async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if(foodName=="" || price=="" || image=="" ){
-      setError("Name, Price, Image are required fields so it must be filled")
-    }else{
-      await addFood(foodName, price, image,extras,cafeteriaName);
+    if (foodName == "" || price == "" || image == "") {
+      setError("Name, Price, Image are required fields so it must be filled");
+    } else {
+      await addFood(foodName, price, image, extras, cafeteriaName);
       setError("");
+      console.log(cafeteriaName)
 
-      setConfirm("Food Added Successfully")
-    
+      setConfirm("Food Added Successfully");
     }
-
   };
 
   return (
     <>
       <div className="form-wrapper">
         <div className="fields">
-        <div style={{ color: "red",alignContent:"center" }}>
-              <p>{error}</p>
+          <div style={{ color: "red", alignContent: "center" }}>
+            <p>{error}</p>
           </div>
-          <div style={{ color: "green",alignContent:"center" }}>
-              <p>{confirm}</p>
+          <div style={{ color: "green", alignContent: "center" }}>
+            <p>{confirm}</p>
           </div>
           <label> Name</label>
-          <input placeholder="Food Name" className="field c_name" value={foodName} onChange={(e) => setFoodName(e.target.value)}/>
+          <input
+            placeholder="Food Name"
+            className="field c_name"
+            value={foodName}
+            onChange={(e) => setFoodName(e.target.value)}
+          />
 
           <label>Price</label>
-          <input placeholder="GHC 15.00" className="field c_name" value={price} onChange={(e) => setPrice(e.target.value)}/>
+          <input
+            placeholder="GHC 15.00"
+            className="field c_name"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+          />
 
           <label>Image</label>
-          <input placeholder="Image URL" className="field c_name" value={image} onChange={(e) => setImage(e.target.value)}/>
+          <input
+            placeholder="Image URL"
+            className="field c_name"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+          />
 
           <label>Extras</label>
-          <input placeholder="Extras" className="field c_name" value={extras} onChange={(e) => setExtras(e.target.value)}/>
+          <input
+            placeholder="Extras"
+            className="field c_name"
+            value={extras}
+            onChange={(e) => setExtras(e.target.value)}
+          />
 
           <label>Cafeteria Name</label>
-          <input placeholder="Cafeteria Name" className="field c_name" value={cafeteriaName} onChange={(e) => setCaficianName(e.target.value)}/>
+          <select
+            value={cafeteriaName}
+            onChange={(e) => setCaficianName(e.target.value)}
+            className="field c_name"
+          >
+            <option selected disabled>
+              Select Cafeteria
+            </option>
+            <option>Akonor</option>
+            <option>BigBen</option>
+          </select>
 
-          <button className="create-btn" onClick={handleSubmit}>Add New Food</button>
+          <button className="create-btn" onClick={handleSubmit}>
+            Add New Food
+          </button>
         </div>
       </div>
     </>

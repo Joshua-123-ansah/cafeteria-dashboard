@@ -247,13 +247,22 @@ label {
   margin: auto;
 }
 
+.price-name {
+  display: flex;
+  width: 500px;
+}
+
+.caf-name {
+  margin-left: 12rem;
+}
+
 .notif-wrapper {
   width: 650px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 0px;
-  height: 170px;
+  height: 184px;
   border-radius: 7px;
   box-shadow: 2px 2px 8px 1px rgba(90, 87, 87, 0.2);
 }
