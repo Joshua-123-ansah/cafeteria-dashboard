@@ -3,7 +3,6 @@ import { db } from "../firebase";
 import { deleteDoc, doc } from "firebase/firestore";
 
 export default function FoodBar({ data }) {
-  console.log(data);
   const handleClick = async (id) => {
     const docRef = doc(db, "allfood", id);
     await deleteDoc(docRef);
