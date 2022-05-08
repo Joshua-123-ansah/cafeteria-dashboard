@@ -71,20 +71,19 @@ const Form = () => {
           <label>Cafeteria Name</label>
           <select
             value={cafeteriaName}
-            onChange={(e) => setCaficianName(e.target.value)}
+            onChange={(e) => {setCaficianName(e.target.value)}}
             className="field c_name"
           >
-            <option selected disabled>
-              Select Cafeteria
-            </option>
-            <option>Akonor</option>
-            <option>BigBen</option>
+           
+            <option value="Akonor">Akonor</option>
+            <option value="BigBen">BigBen</option>
           </select>
 
           <button className="create-btn" onClick={handleSubmit}>
             Add New Food
           </button>
         </div>
+        <h6>You choose {}</h6>
       </div>
     </>
   );
