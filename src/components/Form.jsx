@@ -20,7 +20,7 @@ const Form = () => {
     } else {
       await addFood(foodName, price, image, extras, cafeteriaName);
       setError("");
-      console.log(cafeteriaName)
+      console.log(cafeteriaName);
 
       setConfirm("Food Added Successfully");
     }
@@ -71,10 +71,12 @@ const Form = () => {
           <label>Cafeteria Name</label>
           <select
             value={cafeteriaName}
-            onChange={(e) => {setCaficianName(e.target.value)}}
+            onChange={(e) => {
+              setCaficianName(e.target.value);
+            }}
             className="field c_name"
           >
-           
+            <option value="Select cafeteria">Select cafeteria</option>
             <option value="Akonor">Akonor</option>
             <option value="BigBen">BigBen</option>
           </select>
@@ -83,7 +85,6 @@ const Form = () => {
             Add New Food
           </button>
         </div>
-        <h6>You choose {}</h6>
       </div>
     </>
   );
